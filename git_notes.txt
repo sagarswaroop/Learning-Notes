@@ -1,0 +1,75 @@
+- $ git init <write the repository name (folder/project) : create git repository.
+- ls : to show the files in the repository.
+- ls -a : show the hidden files in the repository.
+- git init : initalise the git for the existing project/repository.
+- mv <folder to move> <folder in move> : move the folder in another folder/project/repository. ex: $ mv my_first_repository awesome_project
+- rm -r <project directy> : to remove (delete) the directy. e.x: rm -r my_first_repositry/enter
+- git add : add files to repository. e.x: $ git add README.
+- these will use to configure the name and email id to know who is commited and pushed the data in the git. 
+    .$ git -config --global user.name “name”
+    .$ git -config --global user.email “email”
+- $ git commit -a -m “Added Course Objective to README” : commit the changes made with file in the git repository.
+
+
+****************** - Check files is commited or not - **************
+Staging: the Git Staging Area keeps track of new and/or modified files in the repository which have not been committed yet
+
+- git status: the command tells you which branch you're on and informs you that it has not diverged from the same branch on the server. it also inform if some file has data changed and didn't commited.
+
+- git log: shows you a log of all your commits in your repository with a uniq key (hash code).
+
+
+******************* - move on older commit - ******************
+- git checkout <hash code 4 5 starting digits> : it move to the commit of which hash code you given in checkout command. E.X:  git checkout e6d6e7e./git checkout master (to go back master branch).
+
+check modification in same file between two commits for same file:
+- git diff <hash code of commit> <hash code of 2nd commit> :  shows which commit has the changes in the file. E.x: git diff 751e d56b.
+
+***************** - Create new branch - ********************
+- git branch <branch name> : create new branch for the project. Ex: git branch signin_feature.
+    Note: you can switch to this new branch (signin_feature) using git checkout branch name.
+
+- git checkout -b <branch name> : this is the short command which create new branch and move into the created branch as soon as it create.
+
+**************** - Merging the branches - ******************
+Note: 
+    *It is improtant that user should be in master branch and nothing should be uncommited.
+    *when the files data are very different in both master and Merging branch. git shows the difference in the those files and user will need to take the decision.
+
+- git merge <branch name> : merge the branch which mentioned in the command. Ex: git merge signin_feature.
+
+When you face isseu during merge such as "fatal: cannot do a partial commit during a merge". Then use only :- git commit -m "mesage you want to write" and enter.
+
+
+
+*************** - Clone your repository - *******************
+When user want to share the repository with someone else or repository is on web and  you don't want to touch original repository. So, you can copy the repository at your local system.
+
+- Git clone <original repository path/url> <your clone reppsitry name> : git clone command copy the original repository and rename with defined name in the command. Ex: $ git clone my_first_repositry  our_clone_repositry
+
+- git remote : it show whether the repository is cloned (show origin) or original repository (show nothing) when run this command under the project/repository.
+
+************** - Connect tow repository to each other - *************
+
+git remote add origin <url> :  to push code on remote/URL. Ex: $ git remote add origin https://github.com/joshvarun/awesome_project.git
+$ git push -u origin master
+git push origin <branch name> :  this will push the branch data to the remote repository or to orign repository from wheere it is clone.
+
+git pull origin <branch name> : to pull or get data from the prent/origin/original repository to child/clone repository.
+
+
+************ - Github with Git - *******************
+
+
+
+
+
+
+
+/////////////////////////////////////
+Note: .git folder is your local repository and it stores all history and version control information.
+
+when face isseu write comman:
+ - rm -f .git/index.lock
+ - git reset --hard HEAD~1
+
