@@ -6,8 +6,8 @@
 - rm -r <project directy> : to remove (delete) the directy. e.x: rm -r my_first_repositry/enter
 - git add : add files to repository. e.x: $ git add README.
 - these will use to configure the name and email id to know who is commited and pushed the data in the git. 
-    .$ git -config --global user.name “name”
-    .$ git -config --global user.email “email”
+    .$ git config --global user.name “name”
+    .$ git config --global user.email “email”
 - $ git commit -a -m “Added Course Objective to README” : commit the changes made with file in the git repository.
 
 
